@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKBM Islam Baitul Quran | Beriman, Berilmu, Berakhlak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Lora', serif; }
+        h1, h2, h3, h4, .font-judul { font-family: 'Libre Baskerville', serif; }
+        .bg-texture { 
+            background-color: #f0f9ff; 
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%231e3a8a' fill-opacity='0.04'%3E%3Cpath d='M0 0h80v80H0V0zm10 10v60h60V10H10zm10 10h40v40H20V20zm10 10v20h20V30H30z'/%3E%3C/g%3E%3C/svg%3E"); 
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-texture text-slate-800 flex flex-col min-h-screen">
+
+    <nav class="bg-blue-900 text-yellow-400 py-3 px-4 md:px-6 sticky top-0 z-40 shadow-lg border-b-4 border-yellow-500">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://i.ibb.co/3s68K1Q/logo-png-2.jpg" alt="Logo PKBM" class="w-10 h-10 rounded-full border-2 border-yellow-500 object-cover shadow-sm" onerror="this.src='https://placehold.co/100x100/1e3a8a/eab308?text=PKBM'">
+                <div>
+                    <span class="font-bold text-base md:text-lg uppercase tracking-wider block leading-tight">PKBM Baitul Quran</span>
+                    <span class="text-xs text-yellow-200 hidden sm:block">Bergas, Kab. Semarang</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase overflow-x-auto py-1">
+                <a href="#beranda" class="hover:text-white transition-colors">Beranda</a>
+                <a href="#profil" class="hover:text-white transition-colors">Profil</a>
+                <a href="#program" class="hover:text-white transition-colors">Program</a>
+                <a href="#berita" class="hover:text-white transition-colors">Berita</a>
+                <a href="#galeri" class="hover:text-white transition-colors">Galeri</a>
+                <a href="#ppdb" class="hover:text-white transition-colors">PPDB</a>
+                
+                <!-- Admin Access Toggle Button -->
+                <button onclick="toggleAdminModal()" class="bg-yellow-500 text-blue-950 px-3 py-1.5 rounded-full hover:bg-yellow-400 flex items-center gap-1 shadow transition-all ml-2">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span id="admin-nav-text">Admin</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="beranda" class="bg-gradient-to-b from-blue-950 via-blue-900 to-blue-800 text-white py-16 md:py-24 px-6 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-block bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold mb-6">
+                ✨ Pendidikan Islam Berkelanjutan & Kesetaraan
+            </div>
+            <h1 class="text-3xl md:text-6xl font-bold mb-4 text-yellow-400 font-judul leading-tight">PKBM Islam Baitul Quran</h1>
+            <p class="text-lg md:text-2xl italic mb-8 text-blue-100 max-w-2xl mx-auto">"Beriman, Berilmu dan Berakhlak Mulia"</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#ppdb" class="bg-yellow-500 text-blue-950 px-8 py-3.5 rounded-full font-bold hover:bg-yellow-400 shadow-lg hover:shadow-yellow-500/30 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Daftar Sekarang
+                </a>
+                <a href="#profil" class="border-2 border-yellow-500 text-yellow-400 px-8 py-3.5 rounded-full font-bold hover:bg-yellow-500 hover:text-blue-950 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-school"></i> Profil Sekolah
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-8 border-b border-blue-100 shadow-inner">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-3">
+                <p class="text-3xl md:text-4xl font-bold text-blue-900 font-judul">150+</p>
+                <p class="text-sm text-slate-600 font-semibold mt-1">Siswa Aktif</p>
+            </div>
+            <div class="p-3">
+                <p class="text-3xl md:text-4xl font-bold text-blue-900 font-judul">15+</p>
+                <p class="text-sm text-slate-600 font-semibold mt-1">Tutor Pengajar</p>
+            </div>
+            <div class="p-3">
+                <p class="text-3xl md:text-4xl font-bold text-blue-900 font-judul">300+</p>
+                <p class="text-sm text-slate-600 font-semibold mt-1">Alumni Lulusan</p>
+            </div>
+            <div class="p-3">
+                <p class="text-3xl md:text-4xl font-bold text-blue-900 font-judul">5+</p>
+                <p class="text-sm text-slate-600 font-semibold mt-1">Program Unggulan</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto py-12 px-6 flex-grow space-y-16">
+
+        <!-- Berita Terkini Section -->
+        <section id="berita" class="scroll-mt-20">
+            <div class="flex justify-between items-end mb-8 border-b-2 border-yellow-500 pb-3">
+                <div>
+                    <h2 class="text-3xl md:text-4xl text-blue-900 font-judul font-bold">Berita & Kegiatan</h2>
+                    <p class="text-sm text-slate-600">Kabar terbaru dari aktivitas PKBM Islam Baitul Quran</p>
+                </div>
+            </div>
+            <div id="berita-list-container" class="grid md:grid-cols-2 gap-8">
+                <!-- Dynamic Berita Items will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Profil Lembaga Section -->
+        <section id="profil" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-t-8 border-blue-900 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl text-blue-900 mb-8 text-center font-judul font-bold">Profil Lembaga</h2>
+            
+            <div class="mb-10 bg-blue-50/60 p-6 rounded-2xl border-l-4 border-yellow-500">
+                <h3 class="text-2xl font-bold text-yellow-600 mb-3 font-judul flex items-center gap-2">
+                    <i class="fa-solid fa-compass"></i> VISI KAMI
+                </h3>
+                <p id="display-visi" class="leading-relaxed text-lg italic text-slate-700">
+                    "Membangun Generasi Bermanhaj Salaful Ummah, Beraqidah Salimah, Berakhlak Karimah, Beribadah Sahihah dan Berjiwa Qurani, serta memiliki kemampuan literasi, numerasi dan keterampilan melalui pendekatan pembelajaran mendalam."
+                </p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-2xl font-bold text-yellow-600 mb-4 font-judul flex items-center gap-2">
+                    <i class="fa-solid fa-list-check"></i> MISI KAMI
+                </h3>
+                <ul id="display-misi" class="list-disc ml-6 space-y-3 text-slate-700">
+                    <li>Menanamkan nilai – nilai islam sesuai AlQur’an dan sunnah dengan pemahaman salaful ummah.</li>
+                    <li>Mendidik peserta didik agar menjadi pribadi yang berakhlak mulia, taat kepada Allah dan Rasul-Nya, serta berbakti kepada orangtua.</li>
+                    <li>Menumbuhkan kecintaan kepada Al Qur’an dan Hadist, memahami menghafal, mengamalkan dan mendakwahkannya.</li>
+                    <li>Mengoptimalkan seluruh potensi peserta didik melalui pendekatan pembelajaran mendalam.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-yellow-600 mb-4 font-judul flex items-center gap-2">
+                    <i class="fa-solid fa-bullseye"></i> TUJUAN KAMI
+                </h3>
+                <ul class="list-decimal ml-6 space-y-2 text-slate-700">
+                    <li>Menguatkan integritas peserta didik melalui konsistensi implementasi nilai-nilai karakter dalam semua aktivitas pembelajaran.</li>
+                    <li>Menguatkan akhlak peserta didik melalui pembiasaan serta keteladanan tutor secara konsisten.</li>
+                    <li>Meningkatkan kapasitas peserta didik melalui pembelajaran sesuai dengan Al-Qur’an.</li>
+                    <li>Menghasilkan lulusan yang memiliki kualifikasi akademis baik untuk meneruskan ke jenjang pendidikan selanjutnya.</li>
+                    <li>Menghasilkan lulusan yang memiliki akhlak Islami dengan pemahaman salaful ummah.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Program Belajar Section -->
+        <section id="program" class="scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl text-blue-900 mb-2 text-center font-judul font-bold">Program Pendidikan</h2>
+            <p class="text-center text-slate-600 mb-10">Pilihan program pembelajaran formal & kesetaraan berlandaskan nilai Quran</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-yellow-500 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-yellow-100 text-yellow-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2 font-judul">PAUD Islam</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pendidikan anak usia dini berbasis pembentukan karakter Islami, hafalan doa, dan pengenalan huruf hijaiyah secara ceria.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-yellow-500 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-800 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2 font-judul">Paket A (Setara SD)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Program pendidikan kesetaraan tingkat dasar dengan fokus kemampuan literasi, numerasi, serta tahfidz Al-Qur'an.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-md border-b-4 border-yellow-500 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2 font-judul">Paket B (Setara SMP)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pendidikan menengah pertama kesetaraan yang menyiapkan kemandirian akademik, skill digital, dan akhlakul karimah.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Kegiatan Section -->
+        <section id="galeri" class="scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl text-blue-900 mb-8 text-center font-judul font-bold">Galeri Kegiatan</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="relative group h-48 bg-slate-200 rounded-2xl overflow-hidden shadow">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Belajar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-sm">Suasana Belajar</div>
+                </div>
+                <div class="relative group h-48 bg-slate-200 rounded-2xl overflow-hidden shadow">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Tahfidz" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-sm">Hafalan Al-Quran</div>
+                </div>
+                <div class="relative group h-48 bg-slate-200 rounded-2xl overflow-hidden shadow">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Edutrip" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-sm">Edutrip Siswa</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulir Pendaftaran PPDB Online -->
+        <section id="ppdb" class="bg-gradient-to-br from-blue-900 to-blue-950 text-white p-8 md:p-12 rounded-3xl shadow-2xl scroll-mt-20 border-2 border-yellow-500">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-8">
+                    <span class="bg-yellow-500 text-blue-950 px-3 py-1 rounded-full text-xs font-bold uppercase">Pendaftaran Online</span>
+                    <h2 class="text-3xl md:text-4xl text-yellow-400 mt-2 font-judul font-bold">Formulir PPDB Online</h2>
+                    <p class="text-sm text-blue-200 mt-1">Daftarkan putra/putri Anda secara langsung melalui formulir di bawah ini.</p>
+                </div>
+
+                <form id="public-ppdb-form" onsubmit="handlePPDBSubmit(event)" class="space-y-4 text-slate-800">
+                    <div>
+                        <label class="block text-white text-xs font-bold mb-1 uppercase">Nama Lengkap Calon Siswa *</label>
+                        <input type="text" id="ppdb-nama" required class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-yellow-500 outline-none" placeholder="Masukkan nama siswa">
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-white text-xs font-bold mb-1 uppercase">Program Yang Dipilih *</label>
+                            <select id="ppdb-program" required class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-yellow-500 outline-none">
+                                <option value="">-- Pilih Program --</option>
+                                <option value="PAUD">PAUD Islam</option>
+                                <option value="Paket A">Paket A (Setara SD)</option>
+                                <option value="Paket B">Paket B (Setara SMP)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-white text-xs font-bold mb-1 uppercase">Nomor WhatsApp / HP *</label>
+                            <input type="tel" id="ppdb-hp" required class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-yellow-500 outline-none" placeholder="08xxxxxxxxxx">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-xs font-bold mb-1 uppercase">Alamat Lengkap *</label>
+                        <textarea id="ppdb-alamat" rows="2" required class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-yellow-500 outline-none" placeholder="Alamat tinggal saat ini"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-blue-950 font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-lg">
+                        <i class="fa-solid fa-paper-plane"></i> Kirim Pendaftaran
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Formulir Kontak -->
+        <section id="kontak" class="bg-white p-8 rounded-3xl shadow-lg border border-slate-200">
+            <h2 class="text-2xl md:text-3xl text-blue-900 mb-4 font-judul font-bold">Kirim Pesan & Pertanyaan</h2>
+            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" id="kontak-nama" required placeholder="Nama Anda" class="w-full p-3 rounded-xl border border-slate-300 outline-none focus:ring-2 focus:ring-blue-900">
+                    <input type="email" id="kontak-email" placeholder="Email (opsional)" class="w-full p-3 rounded-xl border border-slate-300 outline-none focus:ring-2 focus:ring-blue-900">
+                </div>
+                <textarea id="kontak-pesan" rows="3" required placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." class="w-full p-3 rounded-xl border border-slate-300 outline-none focus:ring-2 focus:ring-blue-900"></textarea>
+                <button type="submit" class="bg-blue-900 text-yellow-400 px-6 py-2.5 rounded-xl font-bold hover:bg-blue-950 transition-colors">Kirim Pesan</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-950 text-white py-12 px-6 border-t-4 border-yellow-500 mt-auto">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4 text-yellow-400 font-judul">PKBM Islam Baitul Quran</h3>
+                <p class="text-slate-300 text-sm mb-2"><i class="fa-solid fa-location-dot text-yellow-400 mr-2"></i><strong>Alamat:</strong> Lingkungan Beji RT.002 RW.006 Bergas Lor, Bergas, Kab. Semarang</p>
+                <p class="text-slate-300 text-sm mb-2"><i class="fa-solid fa-phone text-yellow-400 mr-2"></i><strong>Telepon:</strong> <span id="display-telepon">+62 817-9436-441</span> (Abi Nur)</p>
+                <p class="text-slate-300 text-sm mb-2"><i class="fa-solid fa-envelope text-yellow-400 mr-2"></i><strong>Email:</strong> <span id="display-email">pkbmislambq@gmail.com</span></p>
+                <p class="text-slate-300 text-sm mt-3"><i class="fa-brands fa-instagram text-yellow-400 mr-2"></i><strong>Instagram:</strong> <a href="https://instagram.com/pkbm_baitul_quran" target="_blank" class="text-yellow-400 hover:underline">@pkbm_baitul_quran</a></p>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h4 class="text-lg font-bold text-yellow-400 mb-2">Akses Cepat Admin</h4>
+                    <p class="text-xs text-slate-300 mb-4">Pengelola sekolah dapat mengelola data pendaftar PPDB, berita, dan pesan kontak lewat tombol bawah ini.</p>
+                    <button onclick="toggleAdminModal()" class="bg-yellow-500 text-blue-950 px-5 py-2.5 rounded-xl font-bold hover:bg-yellow-400 flex items-center gap-2">
+                        <i class="fa-solid fa-lock"></i> Masuk Panel Admin
+                    </button>
+                </div>
+                <p class="text-xs text-slate-400 mt-6">&copy; 2026 PKBM Islam Baitul Quran. Seluruh hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL PANEL ADMIN -->
+    <div id="admin-modal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+            
+            <!-- Modal Header -->
+            <div class="bg-blue-900 text-white p-5 flex justify-between items-center border-b-4 border-yellow-500">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-user-shield text-yellow-400 text-2xl"></i>
+                    <div>
+                        <h3 class="text-xl font-bold font-judul">Panel Admin Sekolah</h3>
+                        <p class="text-xs text-yellow-200">Pengelolaan Konten & Data PPDB PKBM Islam Baitul Quran</p>
+                    </div>
+                </div>
+                <button onclick="toggleAdminModal()" class="text-slate-300 hover:text-white text-2xl font-bold">&times;</button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-6 overflow-y-auto flex-grow bg-slate-50">
+                
+                <!-- LOGIN FORM (Shown when unauthenticated) -->
+                <div id="admin-login-view" class="max-w-md mx-auto py-8 text-center">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-800 font-judul mb-2">Masuk Sebagai Admin</h4>
+                    <p class="text-xs text-slate-500 mb-6">Masukkan kata sandi admin untuk mengakses dasbor pengelolaan.</p>
+                    
+                    <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                        <input type="password" id="admin-pass-input" placeholder="Kata Sandi Admin (default: admin123)" required class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-900 outline-none text-center">
+                        <button type="submit" class="w-full bg-blue-900 text-yellow-400 font-bold py-3 rounded-xl hover:bg-blue-950 transition-colors">
+                            Buka Dasbor Admin
+                        </button>
+                    </form>
+                    <p class="text-xs text-slate-400 mt-4">*Sandi default awal adalah: <span class="font-mono bg-slate-200 px-1.5 py-0.5 rounded">admin123</span></p>
+                </div>
+
+                <!-- DASHBOARD VIEW (Shown when authenticated) -->
+                <div id="admin-dashboard-view" class="hidden space-y-6">
+                    
+                    <!-- Admin Tabs Navigation -->
+                    <div class="flex flex-wrap border-b border-slate-200 gap-2 pb-2">
+                        <button onclick="switchAdminTab('tab-ppdb')" id="btn-tab-ppdb" class="px-4 py-2 rounded-xl text-sm font-bold bg-blue-900 text-yellow-400">
+                            <i class="fa-solid fa-users"></i> Data PPDB (<span id="count-ppdb">0</span>)
+                        </button>
+                        <button onclick="switchAdminTab('tab-berita')" id="btn-tab-berita" class="px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300">
+                            <i class="fa-solid fa-newspaper"></i> Kelola Berita
+                        </button>
+                        <button onclick="switchAdminTab('tab-pesan')" id="btn-tab-pesan" class="px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300">
+                            <i class="fa-solid fa-envelope"></i> Pesan Masuk (<span id="count-pesan">0</span>)
+                        </button>
+                        <button onclick="switchAdminTab('tab-pengaturan')" id="btn-tab-pengaturan" class="px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300">
+                            <i class="fa-solid fa-gear"></i> Pengaturan
+                        </button>
+                        <button onclick="handleAdminLogout()" class="ml-auto px-4 py-2 rounded-xl text-sm font-bold bg-red-100 text-red-600 hover:bg-red-200">
+                            <i class="fa-solid fa-right-from-bracket"></i> Keluar Admin
+                        </button>
+                    </div>
+
+                    <!-- TAB 1: DATA PPDB -->
+                    <div id="tab-ppdb" class="admin-tab-content space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h4 class="font-bold text-slate-800 text-lg">Pendaftar PPDB Online</h4>
+                            <button onclick="clearAllPPDB()" class="text-xs text-red-600 hover:underline">Hapus Semua Data</button>
+                        </div>
+                        <div class="overflow-x-auto bg-white rounded-xl shadow border border-slate-200">
+                            <table class="w-full text-sm text-left">
+                                <thead class="bg-blue-900 text-yellow-400 uppercase text-xs">
+                                    <tr>
+                                        <th class="p-3">Tanggal</th>
+                                        <th class="p-3">Nama Siswa</th>
+                                        <th class="p-3">Program</th>
+                                        <th class="p-3">WhatsApp</th>
+                                        <th class="p-3">Alamat</th>
+                                        <th class="p-3">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-ppdb-body">
+                                    <!-- Dynamic PPDB rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: KELOLA BERITA -->
+                    <div id="tab-berita" class="admin-tab-content hidden space-y-6">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                            <h5 class="font-bold text-slate-800 mb-3"><i class="fa-solid fa-plus text-blue-900 mr-1"></i> Tambah Berita Baru</h5>
+                            <form onsubmit="handleAddBerita(event)" class="space-y-3">
+                                <div>
+                                    <input type="text" id="add-berita-judul" placeholder="Judul Berita" required class="w-full p-2.5 rounded-xl border border-slate-300 text-sm">
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <input type="date" id="add-berita-tgl" required class="p-2.5 rounded-xl border border-slate-300 text-sm">
+                                    <input type="text" id="add-berita-icon" placeholder="Emoji (e.g. 📰, 🏆, 🎉)" value="📰" class="p-2.5 rounded-xl border border-slate-300 text-sm">
+                                </div>
+                                <div>
+                                    <textarea id="add-berita-isi" rows="3" placeholder="Isi ringkasan berita..." required class="w-full p-2.5 rounded-xl border border-slate-300 text-sm"></textarea>
+                                </div>
+                                <button type="submit" class="bg-blue-900 text-yellow-400 px-5 py-2 rounded-xl text-sm font-bold hover:bg-blue-950">
+                                    Terbitkan Berita
+                                </button>
+                            </form>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-slate-800 mb-3">Daftar Berita Aktif</h5>
+                            <div id="admin-berita-list" class="space-y-3">
+                                <!-- Dynamic Admin Berita Items -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: PESAN MASUK -->
+                    <div id="tab-pesan" class="admin-tab-content hidden space-y-4">
+                        <h4 class="font-bold text-slate-800 text-lg">Pesan Masuk dari Website</h4>
+                        <div id="admin-pesan-list" class="space-y-3">
+                            <!-- Dynamic messages -->
+                        </div>
+                    </div>
+
+                    <!-- TAB 4: PENGATURAN -->
+                    <div id="tab-pengaturan" class="admin-tab-content hidden space-y-4">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm max-w-lg">
+                            <h5 class="font-bold text-slate-800 mb-3">Ubah Kata Sandi Admin</h5>
+                            <form onsubmit="handleChangePassword(event)" class="space-y-3">
+                                <div>
+                                    <label class="text-xs font-bold text-slate-600 block mb-1">Kata Sandi Baru</label>
+                                    <input type="password" id="new-pass-input" required class="w-full p-2.5 rounded-xl border border-slate-300 text-sm">
+                                </div>
+                                <button type="submit" class="bg-yellow-500 text-blue-950 px-5 py-2 rounded-xl text-sm font-bold hover:bg-yellow-400">
+                                    Simpan Kata Sandi
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Default State Data
+        const defaultState = {
+            adminPass: 'admin123',
+            isLoggedIn: false,
+            berita: [
+                {
+                    id: 1,
+                    icon: '📰',
+                    judul: 'Edutrip Yogyakarta 2026: Belajar Seru di Luar Kelas',
+                    tanggal: '2026-04-19',
+                    isi: 'Pada 19 April 2026, PKBM Islam Baitul Quran mengadakan kegiatan Edutrip ke Yogyakarta. Siswa mengunjungi Monumen Jogja Kembali (Monjali), Gembira Loka Zoo, dan Taman Pintar sebagai sarana belajar sains secara interaktif.'
+                },
+                {
+                    id: 2,
+                    icon: '📰',
+                    judul: 'Wisuda dan Pelepasan Kelas VI Tahun 2026',
+                    tanggal: '2026-06-16',
+                    isi: 'Pada 16 Juni 2026, PKBM Islam Baitul Quran melaksanakan Wisuda dan Pelepasan Siswa Kelas VI secara khidmat dan penuh haru sebagai bentuk apresiasi perjuangan siswa.'
+                }
+            ],
+            ppdb: [],
+            pesan: []
+        };
+
+        // Application State
+        let appState = JSON.parse(JSON.stringify(defaultState));
+
+        function renderBeritaPublic() {
+            const container = document.getElementById('berita-list-container');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            appState.berita.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl shadow-lg border-t-4 border-yellow-500 hover:shadow-xl transition-all";
+                card.innerHTML = `
+                    <h3 class="text-xl font-bold mb-2 text-blue-900 font-judul">${item.icon || '📰'} ${item.judul}</h3>
+                    <p class="text-xs font-semibold text-yellow-600 italic mb-3">📅 ${formatTanggal(item.tanggal)}</p>
+                    <p class="text-slate-700 text-sm leading-relaxed">${item.isi}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderAdminPPDB() {
+            const tableBody = document.getElementById('table-ppdb-body');
+            const countBadge = document.getElementById('count-ppdb');
+            if (countBadge) countBadge.innerText = appState.ppdb.length;
+            if (!tableBody) return;
+
+            tableBody.innerHTML = '';
+            if (appState.ppdb.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="6" class="p-4 text-center text-slate-400">Belum ada data pendaftar PPDB.</td></tr>`;
+                return;
+            }
+
+            appState.ppdb.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = "border-b hover:bg-slate-50";
+                tr.innerHTML = `
+                    <td class="p-3 text-xs text-slate-500">${item.waktu}</td>
+                    <td class="p-3 font-bold text-slate-800">${item.nama}</td>
+                    <td class="p-3"><span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-bold">${item.program}</span></td>
+                    <td class="p-3"><a href="https://wa.me/${item.hp.replace(/[^0-9]/g, '')}" target="_blank" class="text-emerald-600 hover:underline font-semibold">${item.hp}</a></td>
+                    <td class="p-3 text-xs text-slate-600">${item.alamat}</td>
+                    <td class="p-3"><button onclick="deletePPDB(${index})" class="text-red-500 hover:text-red-700 text-xs font-bold"><i class="fa-solid fa-trash"></i> Hapus</button></td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        function renderAdminBerita() {
+            const container = document.getElementById('admin-berita-list');
+            if (!container) return;
+
+            container.innerHTML = '';
+            appState.berita.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = "bg-white p-4 rounded-xl border border-slate-200 flex justify-between items-center";
+                div.innerHTML = `
+                    <div>
+                        <p class="font-bold text-slate-800 text-sm">${item.icon} ${item.judul}</p>
+                        <p class="text-xs text-slate-500">${formatTanggal(item.tanggal)}</p>
+                    </div>
+                    <button onclick="deleteBerita(${index})" class="text-red-500 hover:text-red-700 text-xs font-bold px-3 py-1 rounded bg-red-50"><i class="fa-solid fa-trash"></i> Hapus</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function renderAdminPesan() {
+            const container = document.getElementById('admin-pesan-list');
+            const countBadge = document.getElementById('count-pesan');
+            if (countBadge) countBadge.innerText = appState.pesan.length;
+            if (!container) return;
+
+            container.innerHTML = '';
+            if (appState.pesan.length === 0) {
+                container.innerHTML = `<p class="text-sm text-slate-400 italic">Belum ada pesan masuk.</p>`;
+                return;
+            }
+
+            appState.pesan.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = "bg-white p-4 rounded-xl border border-slate-200";
+                div.innerHTML = `
+                    <div class="flex justify-between text-xs text-slate-500 mb-1">
+                        <span class="font-bold text-blue-900">${item.nama} (${item.email || 'Tanpa Email'})</span>
+                        <span>${item.waktu}</span>
+                    </div>
+                    <p class="text-sm text-slate-700">${item.pesan}</p>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function toggleAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            if (!modal) return;
+            modal.classList.toggle('hidden');
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const passInput = document.getElementById('admin-pass-input').value;
+            if (passInput === appState.adminPass) {
+                appState.isLoggedIn = true;
+                document.getElementById('admin-login-view').classList.add('hidden');
+                document.getElementById('admin-dashboard-view').classList.remove('hidden');
+                document.getElementById('admin-nav-text').innerText = 'Dashboard';
+                renderAdminPPDB();
+                renderAdminBerita();
+                renderAdminPesan();
+            } else {
+                alert('Kata sandi salah! Password default adalah: admin123');
+            }
+        }
+
+        function handleAdminLogout() {
+            appState.isLoggedIn = false;
+            document.getElementById('admin-login-view').classList.remove('hidden');
+            document.getElementById('admin-dashboard-view').classList.add('hidden');
+            document.getElementById('admin-nav-text').innerText = 'Admin';
+            document.getElementById('admin-pass-input').value = '';
+        }
+
+        function switchAdminTab(tabId) {
+            document.querySelectorAll('.admin-tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            // Tab styling update
+            ['ppdb', 'berita', 'pesan', 'pengaturan'].forEach(name => {
+                const btn = document.getElementById(`btn-tab-${name}`);
+                if (`tab-${name}` === tabId) {
+                    btn.className = "px-4 py-2 rounded-xl text-sm font-bold bg-blue-900 text-yellow-400";
+                } else {
+                    btn.className = "px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300";
+                }
+            });
+        }
+
+        function handlePPDBSubmit(e) {
+            e.preventDefault();
+            const nama = document.getElementById('ppdb-nama').value;
+            const program = document.getElementById('ppdb-program').value;
+            const hp = document.getElementById('ppdb-hp').value;
+            const alamat = document.getElementById('ppdb-alamat').value;
+
+            const newEntry = {
+                nama, program, hp, alamat,
+                waktu: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })
+            };
+
+            appState.ppdb.unshift(newEntry);
+            document.getElementById('public-ppdb-form').reset();
+            alert('Alhamdulillah! Pendaftaran Anda berhasil dikirim. Admin kami akan menghubungi Anda via WhatsApp.');
+            if (appState.isLoggedIn) renderAdminPPDB();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const nama = document.getElementById('kontak-nama').value;
+            const email = document.getElementById('kontak-email').value;
+            const pesan = document.getElementById('kontak-pesan').value;
+
+            appState.pesan.unshift({
+                nama, email, pesan,
+                waktu: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short' })
+            });
+
+            e.target.reset();
+            alert('Terima kasih! Pesan Anda telah terkirim.');
+            if (appState.isLoggedIn) renderAdminPesan();
+        }
+
+        function handleAddBerita(e) {
+            e.preventDefault();
+            const judul = document.getElementById('add-berita-judul').value;
+            const tanggal = document.getElementById('add-berita-tgl').value;
+            const icon = document.getElementById('add-berita-icon').value || '📰';
+            const isi = document.getElementById('add-berita-isi').value;
+
+            appState.berita.unshift({ id: Date.now(), judul, tanggal, icon, isi });
+            renderBeritaPublic();
+            renderAdminBerita();
+            e.target.reset();
+            alert('Berita berhasil diterbitkan!');
+        }
+
+        function deleteBerita(index) {
+            if (confirm('Yakin ingin menghapus berita ini?')) {
+                appState.berita.splice(index, 1);
+                renderBeritaPublic();
+                renderAdminBerita();
+            }
+        }
+
+        function deletePPDB(index) {
+            if (confirm('Hapus data pendaftar ini?')) {
+                appState.ppdb.splice(index, 1);
+                renderAdminPPDB();
+            }
+        }
+
+        function clearAllPPDB() {
+            if (confirm('Hapus seluruh data pendaftar PPDB?')) {
+                appState.ppdb = [];
+                renderAdminPPDB();
+            }
+        }
+
+        function handleChangePassword(e) {
+            e.preventDefault();
+            const newPass = document.getElementById('new-pass-input').value;
+            if (newPass.length < 4) {
+                alert('Kata sandi minimal 4 karakter!');
+                return;
+            }
+            appState.adminPass = newPass;
+            alert('Kata sandi admin berhasil diperbarui!');
+            e.target.reset();
+        }
+
+        function formatTanggal(str) {
+            if (!str) return '';
+            const d = new Date(str);
+            return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        // Initialize App on load
+        window.onload = function() {
+            renderBeritaPublic();
+        };
+    </script>
+</body>
+</html>
